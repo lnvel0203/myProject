@@ -1,4 +1,4 @@
-package model;
+package mainModel;
 
 import controller.Admin;
 import service.AdminService;
@@ -22,7 +22,7 @@ public class modelView {
 		this.customerView = new CustomerService();
 		this.check = new CheckUtil();
 	}
-	//메인화면 부석현- 23/1/28
+
 	public void mainView() {
 		do {
 			out.printAlert("	    35P 다과 카페에 오신것을 환영합니다.");
@@ -48,7 +48,6 @@ public class modelView {
 
 	}
 	//로그인 체크 메소드
-	//부석현 - 23/1/28
 	public void login() {
 		String id = in.write();
 		String password = in.write();
@@ -65,7 +64,6 @@ public class modelView {
 		}
 	}
 	// 회원가입 메소드
-	// 부석현 23/1/28
 	public void register() {
 		
 		check.registercheck();		
@@ -82,7 +80,6 @@ public class modelView {
 
 	}
 	// 프로그램 종료 메소드
-	// 부석현 - 23/1/28 
 	public void exit() {
 		out.printAlert("		프로그램을 종료합니다.");
 		in.close();

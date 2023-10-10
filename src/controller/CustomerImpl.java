@@ -10,7 +10,6 @@ import dto.Refreshments;
 import util.MessagePrinter;
 import util.MessageWriter;
 
-//싱글톤으로 만들기
 public class CustomerImpl implements Customer{
 
 	private static CustomerImpl instanceC = new CustomerImpl();
@@ -35,7 +34,7 @@ public class CustomerImpl implements Customer{
 		menuList = new ArrayList<Refreshments>();
 	
 	}
-	//부석현 23/1/28 싱글톤 메소드 정의
+
 	public static CustomerImpl getInstance() {
 		if(instanceC == null) {
 			instanceC = new CustomerImpl();
@@ -44,8 +43,6 @@ public class CustomerImpl implements Customer{
 		return instanceC;
 	}
 
-
-	// 부석현 / 1월 10일 / 장바구니 UI 메소드 정의
 	@Override
 	public void cartList() {
 
@@ -82,7 +79,7 @@ public class CustomerImpl implements Customer{
 		}while(true);
 
 	}
-	// 부석현 / 1월 10일 / 장바구니 추가 메소드 정의
+	
 	@Override
 	public void cartAdd() {
 
@@ -102,7 +99,7 @@ public class CustomerImpl implements Customer{
 		}while(true);
 	}
 
-	// 부석현 / 1월 10일 / 장바구니 삭제 메소드 정의
+
 	@Override
 	public void cartRemove() {
 
@@ -127,7 +124,7 @@ public class CustomerImpl implements Customer{
 			}
 		}
 	}
-	// 부석현 / 1월 10일 / 장바구니 결제 메소드 정의
+
 	@Override
 	public void cartbuy() {
 		do {
@@ -174,8 +171,6 @@ public class CustomerImpl implements Customer{
 
 	}
 
-
-	// 부석현 / 1월 10일 / 바로구매 메소드 정의
 	@Override
 	public void nowBuy() {
 
@@ -220,7 +215,7 @@ public class CustomerImpl implements Customer{
 		}while(true);
 
 	}
-	// 부석현 / 1월 28일 / 구매요청 목록 확인 및 환불 메소드 정의
+
 	@Override
 	public void refund() {
 		do {
@@ -269,8 +264,6 @@ public class CustomerImpl implements Customer{
 				out.systemMessage("잘못 입력하셨습니다.");
 			}
 		}while(true);
-
-
 	}
 
 }

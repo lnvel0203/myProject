@@ -1,6 +1,5 @@
 package util;
 
-import java.util.HashMap;
 import controller.Admin;
 import dto.MemberInfo;
 import service.MemberManageService;
@@ -11,7 +10,6 @@ public class CheckUtil {
 	private final String REGEX = "^((?=.*\\d)(?=.*[a-zA-Z])(?=.*[\\W]).{" + MIN + "," + MAX + "})$";
 	private MessageWriter in;
 	private MessagePrinter out;
-	private MemberInfo memberInfo;
 
 	public CheckUtil(){
 		this.in = new MessageWriter();

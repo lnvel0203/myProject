@@ -3,9 +3,6 @@ package util;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-
-
 public class MessageWriter {
 	private Scanner sc;
 

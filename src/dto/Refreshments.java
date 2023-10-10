@@ -1,5 +1,4 @@
 package dto;
-//DTO(Data Transfer Object)
 
 public class Refreshments {
 
@@ -20,8 +19,6 @@ public class Refreshments {
 		this.price = price;
 	}
 
-
-	
 	public int getId() {
 		return id;
 	}
@@ -54,7 +51,6 @@ public class Refreshments {
 		this.price = price;
 	}
 
-	//투스트링 or 출력정보
 	@Override
 	public String toString() {
 		return "[상품 코드 : " + id + " 상품명 : " + name + " 상품가격 : " + price + " 상품재고 : " + stock + "]";

@@ -1,7 +1,6 @@
-package model;
+package mainModel;
 
-public class ProMain {
-	//부석현 - 23/1/28
+public class MainPage {
 	//메인 메소드
 	public static void main(String[] args) {
 

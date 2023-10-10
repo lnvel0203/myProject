@@ -14,9 +14,6 @@ import util.MessageWriter;
 
 public class AdminImpl implements Admin{
 
-	//싱글톤
-	//인터페이스 구현
-	
 	private static AdminImpl instanceA = new AdminImpl();
 	private MessageWriter in;
 	private MessagePrinter out;
@@ -32,7 +29,7 @@ public class AdminImpl implements Admin{
 		this.random = new Random();
 
 	}
-	//부석현 23/1/28 싱글톤 메소드 정의
+
 	public static AdminImpl getInstance() {
 		if(instanceA == null) {
 			instanceA = new AdminImpl();
@@ -41,7 +38,6 @@ public class AdminImpl implements Admin{
 		return instanceA;
 	}
 
-	//부석현 23/1/28 상품목록 확인 메소드 정의
 	@Override
 	public void productSelect() {
 		if(adGood.size() < 0) {
@@ -53,7 +49,6 @@ public class AdminImpl implements Admin{
 		}
 	}
 
-	//부석현 23/1/28 상품추가 메소드 정의
 	@Override
 	public void productAdd() {
 
@@ -79,7 +74,6 @@ public class AdminImpl implements Admin{
 		}while(true);
 	}
 
-	//부석현 23/1/28 상품수정 메소드 정의
 	@Override
 	public void productUpdate() {
 		int num = 0;
@@ -182,8 +176,7 @@ public class AdminImpl implements Admin{
 			}while(back);
 		}
 	}
-
-	//부석현 23/1/28 상품제거 메소드 정의
+	
 	@Override
 	public void productRemove() {
 		if(adGood.size() <= 0) {
@@ -213,7 +206,6 @@ public class AdminImpl implements Admin{
 
 	}
 	
-	//부석현 23/1/28 결제대기 목록 메소드 정의
 	@Override
 	public void orderSelect() {
 		out.printAlert("구매 대기중");
@@ -247,7 +239,6 @@ public class AdminImpl implements Admin{
 
 	}
 	
-	// 부석현 23/1/28 결제승인 메소드 정의
 	@Override
 	public void orderConfirm() {
 		
@@ -294,7 +285,6 @@ public class AdminImpl implements Admin{
 
 
 	}
-	// 부석현 23/1/28 환불 메소드 정의
 	@Override
 	public void orderCancle() {
 
@@ -341,7 +331,6 @@ public class AdminImpl implements Admin{
 		}	
 
 	}
-	//부석현 23/1/28 결산체크 메소드 정의
 	@Override
 	public void saleTotal() {
 
